@@ -1,0 +1,30 @@
+Alan Turing (1912-1954) Invented the Turing machine laying the theoretical foundation for computation and artificial intelligence.
+Frank Rosenblatt (1928-1971) Developed the perceptron a fundamental concept in neural network theory.
+John McCarthy (1927-2011) Coined the term "artificial intelligence" and contributed to the development of the Lisp programming language. 
+Marvin Minsky (1927-2016) Cofounder of the MIT AI Laboratory and a key figure in the development of artificial neural networks.
+John Hopfield (born 1933)Introduced the Hopfield network a form of recurrent neural network important for associative memory.
+Yoshua Bengio (born 1964) Corecipient of the Turing Award for his contributions to deep learning particularly for his work on neural networks.
+Geoffrey Hinton (born 1947) Pioneered backpropagation algorithms and made significant contributions to the development of deep learning.
+Andrew Ng (born 1976) Cofounder of Google Brain contributed to the development of online education in machine learning and worked on deep learning.
+Yann LeCun (born 1960) Developed convolutional neural networks (CNNs) and made significant contributions to computer vision.
+Juergen Schmidhuber (born 1963) Pioneered the use of neural networks in reinforcement learning and developed the long shortterm memory (LSTM) network.
+Vladimir Vapnik (born 1936) Codeveloped the Support Vector Machine (SVM) a powerful algorithm for classification and regression.
+David Haussler (born 1953) Developed algorithms for bioinformatics and contributed to the development of machine learning methods for genomics.
+FeiFei Li (born 1976) Led research in computer vision cofounded AI4ALL to promote diversity in AI and worked on the ImageNet project.
+Daphne Koller (born 1968) Cofounder of Coursera made contributions to probabilistic graphical models and machine learning for biology.
+Cynthia Breazeal (born 1967) Pioneer in social robotics developed the social robot Kismet and contributed to the field of affective computing.
+Richard Sutton (born 1962) Coauthor of the book "Reinforcement Learning An Introduction" a key resource in the field of reinforcement learning.
+Michael Jordan (born 1956) Developed the concept of "ensemble learning" and contributed to probabilistic graphical models.
+Sebastian Thrun (born 1967) Cofounded Google X and led the development of Google's selfdriving car. Also a pioneer in online education for machine learning.
+Christopher Bishop (born 1959) Author of the book "Pattern Recognition and Machine Learning" and contributed to the development of Bayesian neural networks.
+Tom Mitchell (born 1951) Worked on the development of the first successful practical autonomous vehicle known as Navlab.
+Ray Kurzweil (born 1948) Known for his work on optical character recognition (OCR) and speech recognition contributing to the field of natural language processing.
+Leon Bottou (born 1962) Contributed to the development of stochastic gradient descent algorithms a key optimization technique in machine learning.
+Vapnik–Chervonenkis theory (Vladimir Vapnik and Alexey Chervonenkis) Developed the statistical learning theory which laid the foundation for support vector machines (SVM).
+Michael I. Jordan (born 1956) Coined the term "variational methods for graphical models" and made significant contributions to machine learning theory.
+Peter Norvig (born 1956) Director of Research at Google coauthored "Artificial Intelligence A Modern Approach" a widely used textbook.
+Jitendra Malik (born 1960) Made contributions to computer vision image segmentation and object recognition.
+David Silver Codeveloped AlphaGo an artificial intelligence program that defeated a world champion Go player.
+Demis Hassabis (born 1976)Cofounder of DeepMind a company known for advancements in deep learning and AI research.
+Ian Goodfellow (born 1985) Coauthored the seminal paper on Generative Adversarial Networks (GANs) a breakthrough in generative models.
+Ruslan Salakhutdinov (born 1977) Contributed to deep learning and probabilistic graphical models particularly in the field of unsupervised learning.
