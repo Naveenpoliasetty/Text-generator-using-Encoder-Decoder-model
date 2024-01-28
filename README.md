@@ -30,33 +30,12 @@ LSTMs can be used in a bidirectional manner, processing input sequences in both 
 ## Working
 
 #### Text preprocessing
-Import Libraries:
-Import TensorFlow and the Tokenizer class from Keras.
+The process involves iterating over each line in the input text, assuming sentences are separated by '\n'. Each sentence is tokenized using the `texts_to_sequences` method of a tokenizer (`tk`), converting words into numerical indices based on the vocabulary learned during fitting. Sequences of increasing lengths are then created for each tokenized sentence, starting from the first word up to the entire sentence, and appended to a list named `sequences`. Additionally, the `pad_sequences` function from `tensorflow.keras.utils` is imported to ensure all sequences have the same length. This function is then applied to the list of sequences (`squence`), padding or truncating them as needed and storing the result in a variable named `input_sequence`.
 
-Define Input Text:<br>
-Create a variable named data that holds your input text. This could be any text data you want to process.
+For feature extraction, variable `X` is created by selecting all rows and all columns except the last one from `input_sequence`, excluding the last element in each sequence. For target label extraction, variable `y` is created by selecting all rows and only the last column from `input_sequence`, representing the next element in each sequence.
 
-Initialize Tokenizer:<br>
-Create an instance of the Tokenizer class called tk.
-Fit the tokenizer on the input text using the fit_on_texts method. This step builds a vocabulary based on the words in the text.
+To prepare target labels (`y`) for training, they are one-hot encoded using the `to_categorical` function. The assumption is made that there are 255 classes, and the encoding is designed to cover the range from 0 to 254.
 
-Tokenization Loop:<br>
-Iterate over each line in the input text (assuming sentences are separated by '\n').
-Tokenize each sentence using the texts_to_sequences method of the tokenizer (tk). This method converts each word in the sentence to a numerical index based on the vocabulary learned during fitting.
-Create Sequences:<br>
-For each tokenized sentence, create sequences of increasing lengths, starting from the first word up to the entire sentence.
-Append these sequences to the sequences list.
-Import Pad Sequences:<br>
-Import the pad_sequences function from tensorflow.keras.utils. This function is used to ensure that all sequences in a list have the same length by padding or truncating them as needed.
-Pad Sequences:<br>
-Create a variable named input_sequence.
-Use pad_sequences to pad the list of sequences (squence) with zeros to ensure they all have the same length.
-maxlen is the maximum length of the sequences after padding.
-padding='pre' specifies that the padding should be added to the beginning of each sequence.
-Extracting Input Features (X):Create a variable named X.Select all rows and all columns except the last one from the input_sequence using input_squence[:,:-1]. This is done to create input features for the model, excluding the last element in each sequence.
-Extracting Target Labels (y):Create a variable named y. Select all rows and only the last column from the input_sequence using input_squence[:,-1]. This is done to create target labels for the model, representing the next element in each sequence.
-
-One-Hot Encoding Target Labels (y): Import the to_categorical function from tensorflow.keras.utils. Use to_categorical to convert the target labels (y) into one-hot encoded format. num_classes=255 specifies the number of classes for one-hot encoding. It assumes that the target labels range from 0 to 254.
 
 ### Importing Necessary Modules:
 
