@@ -58,7 +58,7 @@ Extracting Target Labels (y):Create a variable named y. Select all rows and only
 
 One-Hot Encoding Target Labels (y): Import the to_categorical function from tensorflow.keras.utils. Use to_categorical to convert the target labels (y) into one-hot encoded format. num_classes=255 specifies the number of classes for one-hot encoding. It assumes that the target labels range from 0 to 254.
 
-Importing Necessary Modules:
+### Importing Necessary Modules:
 
 Import the necessary modules from TensorFlow Keras, including Sequential, Dense, Embedding, LSTM, and Bidirectional.
 Creating a Sequential Model (model):
