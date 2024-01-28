@@ -37,7 +37,7 @@ For feature extraction, variable `X` is created by selecting all rows and all co
 To prepare target labels (`y`) for training, they are one-hot encoded using the `to_categorical` function. The assumption is made that there are 255 classes, and the encoding is designed to cover the range from 0 to 254.
 
 
-### Importing Necessary Modules:
+### Implementing Neural Network:
 
 Import the necessary modules from TensorFlow Keras, including Sequential, Dense, Embedding, LSTM, and Bidirectional.
 Creating a Sequential Model (model):
@@ -66,3 +66,24 @@ Training the Model:
 Train the model using the fit method.
 X is the input data, and y is the target data.
 The number of training epochs is set to 100 (epochs=100).
+
+### Text generation using the implemented model
+
+The `word_predictor` function predicts the next words in a given text using a trained model. Here's how it works:
+
+1. Tokenization and Padding:
+   - Tokenize the input text and pad the sequence with zeros to match the model's input length.
+
+2. Model Prediction:
+   - Use the trained model to predict the next word in the sequence.
+
+3. Word Lookup:
+   - Map the predicted index to an actual word using the tokenizer's vocabulary.
+
+4. Repeat:
+   - Repeat these steps for the desired number of words (`len`).
+
+5. Printing Result:
+   - Print the final text with the predicted words.
+
+This function generates a sequence of predicted words based on the input text and the trained language model. The quality of predictions depends on the effectiveness of the model and tokenizer.
