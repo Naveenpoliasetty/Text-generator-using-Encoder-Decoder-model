@@ -38,3 +38,22 @@ Create a variable named input_sequence.
 Use pad_sequences to pad the list of sequences (squence) with zeros to ensure they all have the same length.
 maxlen is the maximum length of the sequences after padding.
 padding='pre' specifies that the padding should be added to the beginning of each sequence.
+
+
+Extracting Input Features (X):<br>
+
+Create a variable named X.
+Select all rows and all columns except the last one from the input_sequence using input_squence[:,:-1]. This is done to create input features for the model, excluding the last element in each sequence.
+Display the shape of the resulting X array using X.shape.
+
+Extracting Target Labels (y):<br>
+
+Create a variable named y.
+Select all rows and only the last column from the input_sequence using input_squence[:,-1]. This is done to create target labels for the model, representing the next element in each sequence.
+Display the shape of the resulting y array using y.shape.
+
+One-Hot Encoding Target Labels (y):<br>
+
+Import the to_categorical function from tensorflow.keras.utils.
+Use to_categorical to convert the target labels (y) into one-hot encoded format.
+num_classes=255 specifies the number of classes for one-hot encoding. It assumes that the target labels range from 0 to 254.
