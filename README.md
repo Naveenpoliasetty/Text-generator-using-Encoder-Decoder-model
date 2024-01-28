@@ -43,38 +43,20 @@ Fit the tokenizer on the input text using the fit_on_texts method. This step bui
 Tokenization Loop:<br>
 Iterate over each line in the input text (assuming sentences are separated by '\n').
 Tokenize each sentence using the texts_to_sequences method of the tokenizer (tk). This method converts each word in the sentence to a numerical index based on the vocabulary learned during fitting.
-
 Create Sequences:<br>
 For each tokenized sentence, create sequences of increasing lengths, starting from the first word up to the entire sentence.
 Append these sequences to the sequences list.
-
 Import Pad Sequences:<br>
 Import the pad_sequences function from tensorflow.keras.utils. This function is used to ensure that all sequences in a list have the same length by padding or truncating them as needed.
-
 Pad Sequences:<br>
 Create a variable named input_sequence.
 Use pad_sequences to pad the list of sequences (squence) with zeros to ensure they all have the same length.
 maxlen is the maximum length of the sequences after padding.
 padding='pre' specifies that the padding should be added to the beginning of each sequence.
+Extracting Input Features (X):Create a variable named X.Select all rows and all columns except the last one from the input_sequence using input_squence[:,:-1]. This is done to create input features for the model, excluding the last element in each sequence.
+Extracting Target Labels (y):Create a variable named y. Select all rows and only the last column from the input_sequence using input_squence[:,-1]. This is done to create target labels for the model, representing the next element in each sequence.
 
-
-Extracting Input Features (X):<br>
-
-Create a variable named X.
-Select all rows and all columns except the last one from the input_sequence using input_squence[:,:-1]. This is done to create input features for the model, excluding the last element in each sequence.
-Display the shape of the resulting X array using X.shape.
-
-Extracting Target Labels (y):<br>
-
-Create a variable named y.
-Select all rows and only the last column from the input_sequence using input_squence[:,-1]. This is done to create target labels for the model, representing the next element in each sequence.
-Display the shape of the resulting y array using y.shape.
-
-One-Hot Encoding Target Labels (y):<br>
-
-Import the to_categorical function from tensorflow.keras.utils.
-Use to_categorical to convert the target labels (y) into one-hot encoded format.
-num_classes=255 specifies the number of classes for one-hot encoding. It assumes that the target labels range from 0 to 254.
+One-Hot Encoding Target Labels (y): Import the to_categorical function from tensorflow.keras.utils. Use to_categorical to convert the target labels (y) into one-hot encoded format. num_classes=255 specifies the number of classes for one-hot encoding. It assumes that the target labels range from 0 to 254.
 
 Importing Necessary Modules:
 
